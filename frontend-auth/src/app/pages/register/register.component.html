@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>Registro</h2>
+  <form (ngSubmit)="register()">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input id="nombre" [(ngModel)]="user.nombre" name="nombre" required>
+    </div>
+    <div class="form-group">
+      <label for="apellido">Apellido</label>
+      <input id="apellido" [(ngModel)]="user.apellido" name="apellido" required>
+    </div>
+    <div class="form-group">
+      <label for="correo">Correo</label>
+      <input id="correo" [(ngModel)]="user.correo" name="correo" type="email" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Contraseña</label>
+      <input id="password" [(ngModel)]="user.password" name="password" type="password" required>
+    </div>
+    <p-button type="submit" label="Registrarse" styleClass="p-button-raised"></p-button>
+  </form>
+  <p-message *ngIf="message" severity="success" [text]="message"></p-message>
+  <p-message *ngIf="error" severity="error" [text]="error"></p-message>
+  <div *ngIf="qrCodeUrl" class="qr-code">
+    <p>Escanear con Google Authenticator:</p>
+    <img [src]="qrCodeUrl" alt="QR Code">
+  </div>
+</div>

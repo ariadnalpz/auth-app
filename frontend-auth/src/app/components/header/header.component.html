@@ -1,0 +1,13 @@
+<header class="header">
+       <div class="container">
+         <h1 class="logo">MiApp</h1>
+         <nav>
+           <p-button *ngIf="isAuthenticated" label="Inicio" routerLink="/home" styleClass="p-button-text"></p-button>
+           <ng-container *ngIf="!isAuthenticated">
+             <p-button label="Registro" routerLink="/register" styleClass="p-button-text"></p-button>
+             <p-button label="Login" routerLink="/login" styleClass="p-button-text"></p-button>
+           </ng-container>
+           <p-button *ngIf="isAuthenticated" label="Cerrar Sesión" (click)="logout()" styleClass="p-button-text"></p-button>
+         </nav>
+       </div>
+     </header>

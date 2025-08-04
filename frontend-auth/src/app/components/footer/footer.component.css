@@ -1,0 +1,12 @@
+.footer {
+       background-color: #2055b8;
+       padding: 1rem 0;
+       text-align: center;
+       border-top: 1px solid #2055b8;
+     }
+
+     .container {
+       max-width: 1200px;
+       margin: 0 auto;
+       padding: 0 1rem;
+     }
