@@ -2,3 +2,6 @@
 node_modules/
 dist/
 .env
+
+# Angular
+frontend-auth/node_modules/
